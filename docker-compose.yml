@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  atm-mysql:
+    image: mysql:5.7
+    container_name: "atm-mysql"
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpass
+      - MYSQL_DATABASE=atm
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypass
+    volumes:
+      - ./_data/mysql:/var/lib/mysql
+    ports:
+      - 3307:3306

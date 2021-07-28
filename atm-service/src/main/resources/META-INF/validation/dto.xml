@@ -1,0 +1,9 @@
+<constraint-mappings xmlns="http://jboss.org/xml/ns/javax/validation/mapping" version="1.1">
+
+    <bean class="atm.client.dto.auth.account.AccountCreateRequest" ignore-annotations="false">
+        <field name="email">
+            <constraint annotation="atm.service.web.rest.validator.UniqueAccountEmail"/>
+        </field>
+    </bean>
+
+</constraint-mappings>
